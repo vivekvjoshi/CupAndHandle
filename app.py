@@ -22,7 +22,9 @@ limit = st.sidebar.select_slider("Number of Stocks to Scan", options=limit_optio
 
 st.sidebar.divider()
 st.sidebar.header("🤖 AI Verification")
-api_key = st.sidebar.text_input("Gemini API Key (Optional)", type="password", help="Get a free key at aistudio.google.com")
+# Default key provided by user
+default_key = "AIzaSyDnvcDEimBNlhf6FhaQWspmU-XVF8k-mnA"
+api_key = st.sidebar.text_input("Gemini API Key (Optional)", value=default_key, type="password", help="Get a free key at aistudio.google.com")
 
 run_btn = st.sidebar.button("Run Scanner", type="primary")
 
